@@ -1,0 +1,21 @@
+{
+  "name": "obs.remote.kefir",
+  "version": "0.1.0",
+  "main": "lib/socket.js",
+  "author": "Stefan Rimaila <stefan@rimaila.fi>",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "karet.util": "^0.17.2",
+    "kefir": "^3.8.0",
+    "partial.lenses": "^13.1.1",
+    "ramda": "^0.25.0",
+    "sanctuary": "^0.14.1",
+    "ws": "^3.3.3"
+  },
+  "optionalDependencies": {
+    "@types/kefir": "^3.7.0",
+    "@types/ramda": "^0.25.13",
+    "@types/ws": "^3.2.1"
+  }
+}
