@@ -39,25 +39,25 @@ import { createSocket, send } from 'obs.remote.kefir';
 
 ### Sockets
 
-#### <a id="createSocket"></a> `createSocket (url, opts) -> socket`
+#### <a id="createSocket"></a> [`createSocket (url, opts) -> socket`](#createSocket")
 
 ### Listening to events
 
-#### <a id="listenTo_"></a> `listenTo_ (socket, type) -> Observable`
+#### <a id="listenTo_"></a> [`listenTo_ (socket, type) -> Observable`](#listenTo_)
 
-#### <a id="listenTo"></a> `listenTo socket -> type -> Observable`
+#### <a id="listenTo"></a> [`listenTo socket -> type -> Observable`](#listenTo)
 
-#### <a id="listenToOnce_"></a> `listenToOnce_ (socket, type) -> Observable`
+#### <a id="listenToOnce_"></a> [`listenToOnce_ (socket, type) -> Observable`](#listenToOnce_)
 
-#### <a id="listenToOnce"></a> `listenToOnce socket -> type -> Observable`
+#### <a id="listenToOnce"></a> [`listenToOnce socket -> type -> Observable`](#listenToOnce)
 
-#### <a id="listenFor_"></a> `listenFor_ (type, socket) -> Observable`
+#### <a id="listenFor_"></a> [`listenFor_ (type, socket) -> Observable`](#listenFor_)
 
-#### <a id="listenFor"></a> `listenFor type -> socket -> Observable`
+#### <a id="listenFor"></a> [`listenFor type -> socket -> Observable`](#listenFor)
 
 ### Sending commands
 
-#### <a id="send_"></a> `send_ (socket, type, args) -> Observable`
+#### <a id="send_"></a> [`send_ (socket, type, args) -> Observable`](#send_)
 
 The basic, uncurried function of sending a request to the OBS WebSocket. Returns an `Observable` with the result of the request, either with a `value` of the result, or an `error` if the request resulted in an error.
 
@@ -68,7 +68,7 @@ scenes.log('scenes');
 // => [sceneObj1, sceneObj2, ..., sceneObjN]
 ```
 
-#### <a id="send2"></a> `send2 socket -> (type[, args]) -> Observable`
+#### <a id="send2"></a> [`send2 socket -> (type[, args]) -> Observable`](#send2)
 
 Curried binary version of `send_` that takes an optional third argument. Returns an `Observable` containing the result.
 
@@ -79,7 +79,7 @@ const scenes = command('GetSceneList');
 const switchScene = command('SetCurrentScene', { 'scene-name': 'foo' });
 ```
 
-#### <a id="send3"></a> `send3 socket -> type -> args -> Observable`
+#### <a id="send3"></a> [`send3 socket -> type -> args -> Observable`](#send3)
 
 Curried ternary version of `send_` that takes three arguments. Returns an `Observable` containing the result.
 
