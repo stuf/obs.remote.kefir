@@ -1,9 +1,28 @@
 {
   "name": "obs.remote.kefir",
+  "description": "OBS Remote WebSocket implementation based on Kefir streams and partial lenses",
   "version": "0.1.0",
   "main": "lib/socket.js",
   "author": "Stefan Rimaila <stefan@rimaila.fi>",
+  "bugs": "https://github.com/stuf/obs.remote.kefir/issues",
+  "homepage": "https://github.com/stuf/obs.remote.kefir",
+  "repository": "github:stuf/obs.remote.kefir",
+  "keywords": [
+    "obs",
+    "reactive",
+    "kefir",
+    "partial lenses",
+    "websockets"
+  ],
   "license": "MIT",
+  "files": [
+    "lib/socket.js"
+  ],
+  "scripts": {
+    "test": "jest --config jest.config.js",
+    "lint": "eslint src/",
+    "precommit": "npm run lint"
+  },
   "dependencies": {
     "debug": "^3.1.0",
     "karet.util": "^0.17.2",
@@ -14,8 +33,16 @@
     "ws": "^3.3.3"
   },
   "optionalDependencies": {
+    "@types/jest": "^22.0.0",
     "@types/kefir": "^3.7.0",
     "@types/ramda": "^0.25.13",
     "@types/ws": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-plugin-jest": "^21.5.0",
+    "husky": "^0.14.3",
+    "jest": "^22.0.4",
+    "mock-socket": "^7.1.0"
   }
 }
