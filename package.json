@@ -3,7 +3,9 @@
   "description": "OBS Remote WebSocket implementation based on Kefir streams and partial lenses",
   "version": "0.1.0",
   "main": "lib/socket.js",
-  "author": "Stefan Rimaila <stefan@rimaila.fi>",
+  "contributors": [
+    "Stefan Rimaila <stefan@rimaila.fi>"
+  ],
   "bugs": "https://github.com/stuf/obs.remote.kefir/issues",
   "homepage": "https://github.com/stuf/obs.remote.kefir",
   "repository": "github:stuf/obs.remote.kefir",
