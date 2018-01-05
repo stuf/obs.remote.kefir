@@ -34,6 +34,7 @@ const onError$ = listen('error');
 
 /**
  * Retrieve the list of available scenes when the socket has been opened.
+ * We can use all methods that are available on Kefir streams.
  */
 onOpen$.onValue(() => {
   const scenes$ = command('GetSceneList');
