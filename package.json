@@ -45,6 +45,8 @@
     "eslint-plugin-jest": "^21.5.0",
     "husky": "^0.14.3",
     "jest": "^22.0.4",
-    "mock-socket": "^7.1.0"
+    "mock-socket": "^7.1.0",
+    "sanctuary-def": "^0.14.0",
+    "sanctuary-type-identifiers": "^2.0.1"
   }
 }

@@ -2670,7 +2670,7 @@ safe-buffer@^5.0.1, safe-buffer@^5.1.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
-sanctuary-def@0.14.0:
+sanctuary-def@0.14.0, sanctuary-def@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/sanctuary-def/-/sanctuary-def-0.14.0.tgz#cebbec591f5a9b211b34b4b942999d6534010fa8"
   dependencies:
@@ -2687,7 +2687,7 @@ sanctuary-type-identifiers@1.0.x:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/sanctuary-type-identifiers/-/sanctuary-type-identifiers-1.0.0.tgz#e8f359f006cb5e624cfb8464603fc114608bde9f"
 
-sanctuary-type-identifiers@2.0.1, sanctuary-type-identifiers@2.0.x:
+sanctuary-type-identifiers@2.0.1, sanctuary-type-identifiers@2.0.x, sanctuary-type-identifiers@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/sanctuary-type-identifiers/-/sanctuary-type-identifiers-2.0.1.tgz#fc524cf6dd92cebfcbb0dd9509eff193159a20ed"
 
