@@ -10,3 +10,8 @@ exclude_paths:
   - ".eslintrc.js"
   - "jest.config.js"
   - "test/**"
+  - "**/*.md"
+  - ".editorconfig"
+  - ".gitignore"
+  - "package.json"
+  - "yarn.lock"
