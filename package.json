@@ -36,6 +36,7 @@
     "partial.lenses": "^13.1.1",
     "ramda": "^0.25.0",
     "sanctuary": "^0.14.1",
+    "sanctuary-type-classes": "^7.2.0",
     "ws": "^3.3.3"
   },
   "optionalDependencies": {
