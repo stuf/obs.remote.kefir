@@ -1,5 +1,4 @@
 const WebSocket = require('ws');
-const R = require('ramda');
 const L = require('partial.lenses');
 
 const socket = require('../lib/socket');
