@@ -1,5 +1,5 @@
 const util = require('../lib/util');
-const { Events, Requests } = require('../lib/api');
+const { Events, Requests } = require('../lib/tokens');
 
 const getRandomElem = xs => xs[Math.floor(Math.random() * xs.length)];
 

@@ -1,4 +1,5 @@
 const WebSocket = require('ws');
+const R = require('ramda');
 const L = require('partial.lenses');
 
 const socket = require('../lib/socket');
@@ -17,9 +18,9 @@ describe('socket', () => {
       const { address, port } = wss._server.address();
       const socketAddress = `ws://${address}:${port}`;
 
-      const ws = socket.createSocket(socketAddress);
+      const ws = socket.createSocket_(socketAddress);
 
-      socket.listenTo(ws, 'message').onValue(v => {
+      socket.listenTo('message', ws).onValue(v => {
         const data = JSON.parse(v);
         const type = typeIn(data);
 
@@ -37,13 +38,15 @@ describe('socket', () => {
     };
 
     wss.on('connection', ws => {
-      socket.listenTo(ws, 'message').onValue(v => {
-        const data = JSON.parse(v);
-        expect(data.got).toBe('GetSceneList');
+      socket.listenTo('message', ws).onValue(v => {
+        expect(() => {
+          const data = JSON.parse(v);
+          expect(data.got).toBe('GetSceneList');
+        }).not.toThrow();
         done();
       });
 
-      socket.send(ws, 'GetSceneList');
+      socket.send2('GetSceneList', ws);
 
       ws.close();
     });

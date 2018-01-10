@@ -24,7 +24,8 @@
     "test": "jest --config jest.config.js",
     "lint": "eslint src/",
     "precommit": "npm run lint",
-    "prepublish": "npm run lint && npm test"
+    "prepublish": "npm run lint && npm test",
+    "gen:docs": "transcribe --url 'https://github.com/stuf/obs.remote.kefir/blob/master/{filename}#L{line}'"
   },
   "engines": {
     "node": ">=7.8.0"
@@ -53,6 +54,7 @@
     "jest": "^22.0.4",
     "mock-socket": "^7.1.0",
     "sanctuary-def": "^0.14.0",
-    "sanctuary-type-identifiers": "^2.0.1"
+    "sanctuary-type-identifiers": "^2.0.1",
+    "transcribe": "^1.0.0"
   }
 }
