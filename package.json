@@ -1,7 +1,7 @@
 {
   "name": "obs.remote.kefir",
   "description": "OBS Remote WebSocket implementation based on Kefir streams and partial lenses",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "lib/socket.js",
   "contributors": [
     "Stefan Rimaila <stefan@rimaila.fi>"
