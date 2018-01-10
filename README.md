@@ -40,4 +40,71 @@ import { createSocket, send } from 'obs.remote.kefir';
 ## Reference
 
 <!--transcribe-->
+
+## Core
+
+<h3 name="createSocket_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/./lib/socket.js#L48">createSocket_ :: (String, Object) -⁠> WebSocket</a></code></h3>
+
+Create a new websocket connection to the given `url` and `options`.
+
+This version is not curried.
+
+<h3 name="createSocket"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/./lib/socket.js#L55">createSocket :: String -⁠> Object -⁠> WebSocket</a></code></h3>
+
+Create a websocket.
+
+```js
+const ws = createSocket('ws://localhost:4000');
+```
+
+Curried version [`createSocket_`](#createSocket_)
+
+## Listening to events
+
+<h3 name="listenTo_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/./lib/socket.js#L73">listenTo_ :: String -⁠> WebSocket -⁠> Observable</a></code></h3>
+
+From a given `socket`, listen to events of `type`.
+
+Curried version of [`listenTo_`](#listenTo_)
+
+<h3 name="listenTo"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/./lib/socket.js#L82">listenTo :: (WebSocket, String) -⁠> Observable</a></code></h3>
+
+From a given `socket`, listen to events of `type`.
+
+Curried version of [`listenTo_`](#listenTo_)
+
+<h3 name="listenToOnce_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/./lib/socket.js#L92">listenToOnce_ :: (WebSocket, String) -⁠> Observable</a></code></h3>
+
+Utility function for listening to a single value from an event.
+
+It's identical to doing:
+
+```js
+listenTo(socket, 'open').take(1)
+```
+
+<h3 name="listenToOnce"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/./lib/socket.js#L103">listenToOnce :: String -⁠> WebSocket -⁠> Observable</a></code></h3>
+
+Utility function for listening to a single value from an event.
+
+It's identical to doing:
+
+```js
+listenTo(socket, 'open').take(1)
+```
+
+## Sending commands
+
+<h3 name="send_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/./lib/socket.js#L128">send_ :: (String, Object, WebSocket) -⁠> Observable</a></code></h3>
+
+Send `socket` a message of given `type` with optional arguments.
+
+<h3 name="send2"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/./lib/socket.js#L152">send2 :: String -⁠> WebSocket -⁠> Observable</a></code></h3>
+
+Curried binary version of [`send_`](#send_)
+
+<h3 name="send3"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/./lib/socket.js#L161">send3 :: String -⁠> Object -⁠> WebSocket -⁠> Observable</a></code></h3>
+
+Curried ternary version of [`send_`](#send_)
+
 <!--/transcribe-->

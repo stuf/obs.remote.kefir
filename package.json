@@ -24,7 +24,7 @@
     "test": "jest --config jest.config.js",
     "lint": "eslint src/",
     "precommit": "npm run lint",
-    "prepublish": "npm run lint && npm test",
+    "prepublish": "npm run lint && npm test && npm run gen:docs",
     "gen:docs": "sh scripts/generate_docs.sh"
   },
   "engines": {
