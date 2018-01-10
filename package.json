@@ -25,7 +25,7 @@
     "lint": "eslint src/",
     "precommit": "npm run lint",
     "prepublish": "npm run lint && npm test",
-    "gen:docs": "transcribe --url 'https://github.com/stuf/obs.remote.kefir/blob/master/{filename}#L{line}'"
+    "gen:docs": "sh scripts/generate_docs.sh"
   },
   "engines": {
     "node": ">=7.8.0"
