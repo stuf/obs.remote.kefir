@@ -42,7 +42,8 @@ describe('util', () => {
    [util.kebabCasePascal, 'FooBar', 'foo-bar'],
    [util.pascalCaseCamel, 'fooBar', 'FooBar'],
    [util.pascalCaseConst, 'FOO_BAR', 'FooBar'],
-   [util.pascalCaseKebab, 'foo-bar', 'FooBar']]
+   [util.pascalCaseKebab, 'foo-bar', 'FooBar'],
+   [util.camelCaseKebab, 'foo-bar', 'fooBar']]
     .forEach(([fn, i, o]) =>
       test(fn.toString(), () => {
         expect(fn(i)).toBe(o);
