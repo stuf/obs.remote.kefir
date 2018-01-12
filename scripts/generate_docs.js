@@ -2,19 +2,14 @@
 const L = require('partial.lenses');
 const R = require('ramda');
 const S = require('sanctuary');
-const { randomBytes } = require('crypto');
 const { readFileSync, writeFileSync, readdirSync } = require('fs');
-const { resolve, dirname, basename } = require('path');
-const { cat, exec, touch } = require('shelljs');
+const { exec } = require('shelljs');
 
 const join = require('./common/join');
-const exit1 = require('./common/exit1');
 
 const readFile = f => readFileSync(f).toString();
 
 const concat2 = a => b => S.concat(a, b);
-
-const getRandomFilename = () => randomBytes(4).readUInt32LE().toString(16);
 
 const docUrl = 'https://github.com/stuf/obs.remote.kefir/blob/master/{filename}#L{line}';
 
@@ -76,9 +71,6 @@ module.exports = rootPath => {
 
   const outDocArgs = [files, documentation];
   const outDoc = resultOf(outDocArgs);
-
-  // const fs = R.zip(files, documentation);
-  console.log(JSON.stringify(outDoc, null, 2));
 
   writeFileSync(outFile, outDoc);
 };
