@@ -28,7 +28,7 @@
     "gen:docs": "sh scripts/generate_docs.sh"
   },
   "engines": {
-    "node": ">=7.8.0"
+    "node": ">=7.0.0"
   },
   "dependencies": {
     "debug": "^3.1.0",
@@ -40,19 +40,12 @@
     "sanctuary-type-classes": "^7.2.0",
     "ws": "^3.3.3"
   },
-  "optionalDependencies": {
-    "@types/jest": "^22.0.0",
-    "@types/kefir": "^3.7.0",
-    "@types/ramda": "^0.25.13",
-    "@types/ws": "^3.2.1"
-  },
   "devDependencies": {
     "eslint": "^4.14.0",
     "eslint-plugin-jest": "^21.5.0",
     "husky": "^0.14.3",
     "jest": "^22.0.4",
     "sanctuary-def": "^0.14.0",
-    "sanctuary-type-identifiers": "^2.0.1",
     "shelljs": "^0.8.0",
     "transcribe": "^1.0.0"
   }

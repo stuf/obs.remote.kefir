@@ -7,12 +7,16 @@ const { exec } = require('shelljs');
 
 const join = require('./common/join');
 
+//    readFile :: String -> String
 const readFile = f => readFileSync(f).toString();
 
+//    concat2 :: a -> a -> a
 const concat2 = a => b => S.concat(a, b);
 
+//    docUrl :: String
 const docUrl = 'https://github.com/stuf/obs.remote.kefir/blob/master/{filename}#L{line}';
 
+//    transcribeFile :: String -> String
 const transcribeFile = f => {
   const cmd = exec(`./node_modules/.bin/transcribe --heading-level 4 --url '${docUrl}' lib/${f}`, { silent: true });
 
