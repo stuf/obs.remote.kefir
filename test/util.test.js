@@ -6,7 +6,7 @@ const getRandomElem = xs => xs[Math.floor(Math.random() * xs.length)];
 
 describe('util', () => {
   test(util.genFunc.name, () => {
-    expect(util.genFunc((a, b) => a + b, 'foo')
+    expect(util.genFunc('foo', (a, b) => a + b)
       .toString())
       .toBe('foo :: String -> String');
   });
