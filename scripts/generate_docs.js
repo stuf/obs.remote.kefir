@@ -18,7 +18,7 @@ const docUrl = 'https://github.com/stuf/obs.remote.kefir/blob/master/{filename}#
 
 //    transcribeFile :: String -> String
 const transcribeFile = f => {
-  const cmd = exec(`./node_modules/.bin/transcribe --heading-level 4 --url '${docUrl}' lib/${f}`, { silent: true });
+  const cmd = exec(`./node_modules/.bin/transcribe --heading-level 5 --url '${docUrl}' lib/${f}`, { silent: true });
 
   return cmd.stdout;
 };
@@ -66,7 +66,7 @@ module.exports = rootPath => {
            R.values,
            R.map(v => {
              const lines = [];
-             lines.push(L.get(['meta', 'title', L.reread(concat2('## '))], v));
+             lines.push(L.get(['meta', 'title', L.reread(concat2('### '))], v));
              lines.push(L.get(['content'], v));
 
              return lines.join('\n\n');
