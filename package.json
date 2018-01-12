@@ -53,6 +53,7 @@
     "jest": "^22.0.4",
     "sanctuary-def": "^0.14.0",
     "sanctuary-type-identifiers": "^2.0.1",
+    "shelljs": "^0.8.0",
     "transcribe": "^1.0.0"
   }
 }
