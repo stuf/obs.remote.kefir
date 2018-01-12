@@ -18,7 +18,12 @@
   ],
   "license": "MIT",
   "files": [
-    "lib/socket.js"
+    "lib/socket.js",
+    "lib/util.js",
+    "lib/obs.js",
+    "lib/types.js",
+    "lib/tokens.js",
+    "lib/sanctuary.js"
   ],
   "scripts": {
     "test": "jest --config jest.config.js",

@@ -96,16 +96,16 @@ const OBS = require('obs.remote.kefir/lib/obs');
 
 #### Sessions
 
-<h5 name="connect"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/obs.js#L35">connect :: String -⁠> WebSocket</a></code></h5>
+<h4 name="connect"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/obs.js#L35">connect :: String -⁠> WebSocket</a></code></h4>
 
-<h5 name="listen_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/obs.js#L44">listen_ :: (WebSocket, (Object -⁠> Object)) -⁠> Observable</a></code></h5>
+<h4 name="listen_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/obs.js#L44">listen_ :: (WebSocket, (Object -⁠> Object)) -⁠> Observable</a></code></h4>
 
 Listen to events from the given websocket, and uptionally apply
 a custom transforming function on the result.
 
 This is the uncurried and unchecked version of the function.
 
-<h5 name="listen"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/obs.js#L56">listen :: WebSocket -⁠> Observable</a></code></h5>
+<h4 name="listen"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/obs.js#L56">listen :: WebSocket -⁠> Observable</a></code></h4>
 
 Create an Observable from any events OBS emits.
 
@@ -135,29 +135,29 @@ obsEvents.filter(R.whereEq({ updateType: 'preview-scene-changed' }))
          });
 ```
 
-<h5 name="listenWithTransformer"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/obs.js#L91">listenWithTransformer :: WebSocket -⁠> (Object -⁠> Object) -⁠> Observable</a></code></h5>
+<h4 name="listenWithTransformer"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/obs.js#L91">listenWithTransformer :: WebSocket -⁠> (Object -⁠> Object) -⁠> Observable</a></code></h4>
 
 Create an Observable from any events OBS emits, and transform the event
 with the given function.
 
-<h5 name="command_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/obs.js#L103">command_ :: (String, Object, WebSocket) -⁠> Observable</a></code></h5>
+<h4 name="command_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/obs.js#L103">command_ :: (String, Object, WebSocket) -⁠> Observable</a></code></h4>
 
 Send a command with optional arguments to the given websocket.
 Uncurried.
 
-<h5 name="command"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/obs.js#L109">command :: String -⁠> WebSocket -⁠> Observable</a></code></h5>
+<h4 name="command"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/obs.js#L109">command :: String -⁠> WebSocket -⁠> Observable</a></code></h4>
 
 Send a command without arguments to the given websocket.
 Curried, takes two arguments.
 
-<h5 name="commandWithArgs"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/obs.js#L119">commandWithArgs :: String -⁠> Object -⁠> WebSocket -⁠> Observable</a></code></h5>
+<h4 name="commandWithArgs"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/obs.js#L119">commandWithArgs :: String -⁠> Object -⁠> WebSocket -⁠> Observable</a></code></h4>
 
 Send a command with arguments to the given websocket.
 Curried, takes three arguments.
 
+<h4 name="shouldDisableChecks"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/sanctuary.js#L6">shouldDisableChecks :: String -⁠> String -⁠> Boolean</a></code></h4>
 
----
-### Sockets
+<h4 name="createEnv"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/sanctuary.js#L10">createEnv :: () -⁠> Function</a></code></h4>
 
 <a id="api-sockets"></a>
 
@@ -179,7 +179,7 @@ const socket = require('obs.remote.kefir/lib/socket');
 
 #### Core
 
-<h5 name="createSocket_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L60">createSocket_ :: (String, Object) -⁠> WebSocket</a></code></h5>
+<h4 name="createSocket_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L60">createSocket_ :: (String, Object) -⁠> WebSocket</a></code></h4>
 
 Create a new websocket connection to the given `url` and `options`.
 
@@ -187,7 +187,7 @@ Create a new websocket connection to the given `url` and `options`.
 const ws = createSocket('ws://localhost:4000');
 ```
 
-<h5 name="createSocket"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L69">createSocket :: String -⁠> Object -⁠> WebSocket</a></code></h5>
+<h4 name="createSocket"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L69">createSocket :: String -⁠> Object -⁠> WebSocket</a></code></h4>
 
 Curried version of [`createSocket_`](#createSocket_). Creates a websocket.
 
@@ -198,7 +198,7 @@ const ws = newLocalSocket({ options: {} });
 
 #### Listening to Events
 
-<h5 name="listenTo_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L86">listenTo_ :: String -⁠> WebSocket -⁠> Observable</a></code></h5>
+<h4 name="listenTo_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L86">listenTo_ :: String -⁠> WebSocket -⁠> Observable</a></code></h4>
 
 Listen for events of a certain type from the given socket.
 
@@ -209,7 +209,7 @@ messages.onValue(msg => {
 })
 ```
 
-<h5 name="listenTo"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L100">listenTo :: String -⁠> WebSocket -⁠> Observable</a></code></h5>
+<h4 name="listenTo"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L100">listenTo :: String -⁠> WebSocket -⁠> Observable</a></code></h4>
 
 Curried version of [`listenTo_`](#listenTo_)
 
@@ -234,7 +234,7 @@ const messages = listenFor('message'); // Observable of messages emitted from we
 const errors = listenFor('error'); // Observable of errors emitted from websocket
 ```
 
-<h5 name="listenToOnce_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L129">listenToOnce_ :: (String, WebSocket) -⁠> Observable</a></code></h5>
+<h4 name="listenToOnce_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L129">listenToOnce_ :: (String, WebSocket) -⁠> Observable</a></code></h4>
 
 Create an Observable of events, but emits only a single event, then ends.
 
@@ -246,7 +246,7 @@ listenTo(socket, 'open').take(1).onValue(v => {
 })
 ```
 
-<h5 name="listenToOnce"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L142">listenToOnce :: String -⁠> WebSocket -⁠> Observable</a></code></h5>
+<h4 name="listenToOnce"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L142">listenToOnce :: String -⁠> WebSocket -⁠> Observable</a></code></h4>
 
 Curried version of [`listenToOnce_`](#listenToOnce_). Like with [`listenTo`](#listenTo)
 can be used to easily create Observables of a single event.
@@ -264,21 +264,45 @@ onceForEvent('message').onValue(v => {
 
 #### Sending Commands
 
-<h5 name="send_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L173">send_ :: (String, Object, WebSocket) -⁠> Observable</a></code></h5>
+<h4 name="send_"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L173">send_ :: (String, Object, WebSocket) -⁠> Observable</a></code></h4>
 
 Send `socket` a message of given `type` with optional arguments.
 
-<h5 name="send2"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L200">send2 :: String -⁠> WebSocket -⁠> Observable</a></code></h5>
+<h4 name="send2"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L200">send2 :: String -⁠> WebSocket -⁠> Observable</a></code></h4>
 
 Curried binary version of [`send_`](#send_)
 
-<h5 name="send3"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L209">send3 :: String -⁠> Object -⁠> WebSocket -⁠> Observable</a></code></h5>
+<h4 name="send3"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/socket.js#L209">send3 :: String -⁠> Object -⁠> WebSocket -⁠> Observable</a></code></h4>
 
 Curried ternary version of [`send_`](#send_)
 
+### OBS types
 
----
-### Utilities
+<h4 name="ObsRequest"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/types.js#L20">ObsRequest</a></code></h4>
+
+Represents a `Request` in OBS.
+
+<h4 name="ObsEvent"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/types.js#L28">ObsEvent</a></code></h4>
+
+Represents an `Event` in OBS.
+
+### Observable
+
+<h4 name="KefirObservable"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/types.js#L40">KefirObservable</a></code></h4>
+
+Represents a Kefir `Observable` instance.
+
+<h4 name="KefirProperty"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/types.js#L48">KefirProperty</a></code></h4>
+
+Represents a Kefir `Property` instance.
+
+<h4 name="KefirStream"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/types.js#L56">KefirStream</a></code></h4>
+
+Represents a Kefir `Stream` instance.
+
+<h4 name="WebSocket"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/types.js#L66">WebSocket</a></code></h4>
+
+Represents an instance of `WebSocket`
 
 <a id="api-utilities"></a>
 Contains some generic utilities for handling string tokens of
@@ -286,42 +310,42 @@ different kinds, and conversion functions for them—e.g. for
 creating isomorphisms on tokens, to avoid having to manually convert
 tokens back and forth when interfacing with OBS.
 
-<h5 name="genFunc"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L22">genFunc :: (String -⁠> Function) -⁠> (String -⁠> String)</a></code></h5>
+<h4 name="genFunc"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L22">genFunc :: (String -⁠> Function) -⁠> (String -⁠> String)</a></code></h4>
 
-<h5 name="inList"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L25">inList :: a -⁠> POptic s a</a></code></h5>
+<h4 name="inList"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L25">inList :: a -⁠> POptic s a</a></code></h4>
 
-<h5 name="getFromList"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L28">getFromList :: Foldable f => a -⁠> f a -⁠> a</a></code></h5>
+<h4 name="getFromList"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L28">getFromList :: Foldable f => a -⁠> f a -⁠> a</a></code></h4>
 
 Find the item `x` from the given list of `xs` and return it.
 
-<h5 name="flatJoin"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L36">flatJoin :: [a] -⁠> String</a></code></h5>
+<h4 name="flatJoin"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L36">flatJoin :: [a] -⁠> String</a></code></h4>
 
 Utility for joining nested arrays of strings into a string.
 
-<h5 name="getEvent"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L43">getEvent :: ObsEvent -⁠> String</a></code></h5>
+<h4 name="getEvent"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L43">getEvent :: ObsEvent -⁠> String</a></code></h4>
 
 Get the string representation of the given OBS event type.
 
-<h5 name="getRequest"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L51">getRequest :: ObsRequest -⁠> String</a></code></h5>
+<h4 name="getRequest"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L51">getRequest :: ObsRequest -⁠> String</a></code></h4>
 
 Get the string representation of the given OBS request type.
 
-<h5 name="splitPascal"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L60">splitPascal :: String -⁠> [String]</a></code></h5>
+<h4 name="splitPascal"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L60">splitPascal :: String -⁠> [String]</a></code></h4>
 
 Split a pascal-cased string into an array of words.
 
-<h5 name="splitCamelCase"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L68">splitCamelCase :: String -⁠> [String]</a></code></h5>
+<h4 name="splitCamelCase"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L68">splitCamelCase :: String -⁠> [String]</a></code></h4>
 
 Split a camelcased string into an array of words.
 
-<h5 name="camelCasePascal"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L78">camelCasePascal :: String -⁠> String</a></code></h5>
+<h4 name="camelCasePascal"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L78">camelCasePascal :: String -⁠> String</a></code></h4>
 
 Get the camel-case version of a pascal-cased string.
 
 ```js
 camelCasePascal('FooBar'); // => 'fooBar'
 
-<h5 name="kebabCasePascal"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L90">kebabCasePascal :: String -⁠> String</a></code></h5>
+<h4 name="kebabCasePascal"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L90">kebabCasePascal :: String -⁠> String</a></code></h4>
 
 Get the kebab-case version of a pascal-cased string.
 
@@ -329,7 +353,7 @@ Get the kebab-case version of a pascal-cased string.
 kebabCasePascal('FooBar'); // => 'foo-bar'
 ```
 
-<h5 name="constCasePascal"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L103">constCasePascal :: String -⁠> String</a></code></h5>
+<h4 name="constCasePascal"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L103">constCasePascal :: String -⁠> String</a></code></h4>
 
 Get the "const-cased" version of a pascal-cased string.
 
@@ -337,14 +361,13 @@ Get the "const-cased" version of a pascal-cased string.
 constCasePascal('FooBar'); // => 'FOO_BAR'
 ```
 
-<h5 name="pascalCaseCamel"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L118">pascalCaseCamel :: String -⁠> String</a></code></h5>
+<h4 name="pascalCaseCamel"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L118">pascalCaseCamel :: String -⁠> String</a></code></h4>
 
-<h5 name="pascalCaseKebab"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L125">pascalCaseKebab :: String -⁠> String</a></code></h5>
+<h4 name="pascalCaseKebab"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L125">pascalCaseKebab :: String -⁠> String</a></code></h4>
 
-<h5 name="pascalCaseConst"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L132">pascalCaseConst :: String -⁠> String</a></code></h5>
+<h4 name="pascalCaseConst"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L132">pascalCaseConst :: String -⁠> String</a></code></h4>
 
-<h5 name="camelCaseKebab"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L142">camelCaseKebab :: String -⁠> String</a></code></h5>
-
+<h4 name="camelCaseKebab"><code><a href="https://github.com/stuf/obs.remote.kefir/blob/master/lib/util.js#L142">camelCaseKebab :: String -⁠> String</a></code></h4>
 
 <!--/transcribe-->
 
